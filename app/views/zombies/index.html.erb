@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Zombies</h1>
+
+<div id="zombies">
+  <%= render @zombies %>
+</div>
+
+<%= form_for(Zombie.new, remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'New Zombie', new_zombie_path %>

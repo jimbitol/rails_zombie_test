@@ -1,0 +1,7 @@
+<%= div_for zombie do %>
+  <%= link_to zombie.name, zombie %>
+  <div class="actions">
+    <%= link_to "Edit", edit_zombie_path(zombie) %>
+    <%= link_to "Delete", zombie, method: :delete, remote: true %>
+  </div>
+<% end %>
